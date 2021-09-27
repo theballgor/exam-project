@@ -1,0 +1,27 @@
+.root {
+  margin-bottom: 24px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 !important;
+}
+
+.icon {
+  height: 30px;
+  cursor: pointer;
+}
+
+.logo {
+  color: white;
+  text-transform: capitalize;
+  font-size: 24px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}

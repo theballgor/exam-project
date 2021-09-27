@@ -1,0 +1,84 @@
+.paper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 414px;
+  width: 100%;
+  background-color: white;
+  border: 0 solid #000;
+  outline: none;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+
+
+@import "./src/resources/styles/vars";
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1c1c1c;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.inputContainer {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active
+  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
+}
+
+.buttonRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  gap: 24px;
+
+  @include _480 {
+    flex-direction: column;
+  }
+}
+
+.link {
+  color: $main-color;
+  font-size: 12px;
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.passwordIcon {
+  height: 24px;
+  cursor: pointer;
+  margin-right: 5px;
+}

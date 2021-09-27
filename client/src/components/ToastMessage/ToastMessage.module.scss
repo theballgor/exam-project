@@ -1,0 +1,23 @@
+@import "./src/resources/styles/vars";
+
+.root {
+  cursor: pointer;
+  width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  color: white;
+}
+
+.message {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.message[data-variant='success'] {
+  background-color: $main-green;
+}
+
