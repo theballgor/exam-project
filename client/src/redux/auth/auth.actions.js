@@ -2,13 +2,18 @@ import {
     AUTH_CLEAR_AUTH,
     AUTH_SET_AUTH,
     AUTH_SET_IS_LOADING,
-    AUTH_SET_IS_READY,
+    AUTH_SET_IS_READY, AUTH_SET_IS_STARTUP_LOADING,
     PROFILE_ON_FROM_CHANGED
 } from "../action.types";
 import {LS_EMAIL, LS_TOKEN, LS_USERID, LS_USERNAME} from "../../services/types/localStorage";
 import {httpRequest} from "../../services/utils/api/http.util";
 import {API_AUTH} from "../../services/utils/api/api.routes";
-import {addToastMessage, setAuthStepAction, setIsAuthModalVisibleAction} from "../application/application.actions";
+import {
+    addToastMessage,
+    setAuthStepAction,
+    setIsAuthModalVisibleAction,
+    setIsServerAvailable
+} from "../application/application.actions";
 import {STEP_LOGIN} from "../../modals/AuthModal/types";
 
 const setAuthAction = ({userId, token, email, username, role}) => {
@@ -50,12 +55,11 @@ export const checkAuthAction = () => {
             } else if (status === 401) {
                 localStorage.clear()
             }
-            dispatch(setAuthIsLoading(false))
-            dispatch(setAuthIsReadyAction(true))
         } catch (e) {
-            console.log(e.message)
+            dispatch(setIsServerAvailable(false))
         } finally {
             dispatch(setAuthIsLoading(false))
+            dispatch(setAuthIsReadyAction(true))
         }
     }
 }

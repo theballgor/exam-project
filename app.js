@@ -4,6 +4,7 @@ import cors from 'cors'
 import {config as dotenvInit} from 'dotenv'
 import {default as authRoutes} from './routes/auth.routes.js'
 import {default as profileRoutes} from './routes/profile.routes.js'
+import {default as recordsRoutes} from './routes/record.routes.js'
 
 dotenvInit()
 
@@ -14,6 +15,7 @@ app.use(cors())
 
 app.use('/api/auth/', authRoutes)
 app.use('/api/profile/', profileRoutes)
+app.use('/api/records/', recordsRoutes)
 
 const PORT = process.env.PORT
 const MONGO_URI = process.env.MONGO_URI

@@ -1,7 +1,7 @@
 import {
     APPLICATION_ADD_TOAST_MESSAGE,
     APPLICATION_SET_AUTH_STEP,
-    APPLICATION_SET_IS_AUTH_MODAL_VISIBLE
+    APPLICATION_SET_IS_AUTH_MODAL_VISIBLE, APPLICATION_SET_IS_SERVER_AVAILABLE
 } from "../action.types";
 
 export const setIsAuthModalVisibleAction = flag => {
@@ -21,3 +21,10 @@ export const addToastMessage = message => {
         dispatch({type: APPLICATION_ADD_TOAST_MESSAGE, payload: message})
     }
 }
+
+export const setIsServerAvailable = flag => {
+    return dispatch => {
+        dispatch({type: APPLICATION_SET_IS_SERVER_AVAILABLE, payload: flag})
+    }
+}
+

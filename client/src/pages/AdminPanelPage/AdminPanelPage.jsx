@@ -1,9 +1,12 @@
 import React from 'react'
+import styles from "./AdminPanelPage.module.scss"
 
 const AdminPanelPage = () => {
     return (
-        <div>
-            Admin Panel Page
+        <div className={styles.root}>
+            <div className={'pageTitle'}>
+                Admin panel
+            </div>
         </div>
     )
 }

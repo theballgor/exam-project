@@ -8,12 +8,26 @@ import {Container} from "@material-ui/core";
 import {useSelector} from "react-redux";
 import {ADMIN} from "../services/types/roles";
 import AdminPanelPage from "../pages/AdminPanelPage/AdminPanelPage";
-import ListPage from "../pages/ListPage/ListPage";
+import RecordsPage from "../pages/RecordsPage/RecordsPage";
+import Loader from "../components/Loader/Loader";
+import ServerUnavailablePage from "../pages/ServerUnavailablePage/ServerUnavailablePage";
 
 const useRoutes = () => {
 
     const {token, role} = useSelector(state => state.auth)
+    const {isServerAvailable} = useSelector(state => state.application)
     const isAuthenticated = !!token
+
+    if(!isServerAvailable) {
+        return (
+            <BrowserRouter>
+                <Switch>
+                    <Route path={Routes.Default} exact component={ServerUnavailablePage}/>
+                    <Redirect to={Routes.Default}/>
+                </Switch>
+            </BrowserRouter>
+        )
+    }
 
     if (isAuthenticated) {
         return (
@@ -23,7 +37,7 @@ const useRoutes = () => {
                     <Switch>
                         <Route path={Routes.Default} exact component={HomePage}/>
                         <Route path={Routes.Profile} exact component={ProfilePage}/>
-                        <Route path={Routes.List} exact component={ListPage}/>
+                        <Route path={Routes.Records} exact component={RecordsPage}/>
                         {
                             role === ADMIN &&
                                 <>

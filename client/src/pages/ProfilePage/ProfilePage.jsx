@@ -4,7 +4,6 @@ import {Button, Snackbar, TextField} from "@material-ui/core";
 import {useDispatch, useSelector} from "react-redux";
 import {loadProfileDataActions, onProfileChangedAction, onProfileSaveAction} from "../../redux/profile/profile.actions";
 import Loader from "../../components/Loader/Loader";
-import ToastMessage from "../../components/ToastMessage/ToastMessage";
 
 const ProfilePage = () => {
 
@@ -112,6 +111,7 @@ const ProfilePage = () => {
                                     label={'Additional info'}
                                     type={'text'}
                                     multiline
+                                    rows={'3'}
                                     onChange={onInputChange}
                                     className={styles.input}
                                     value={additionalInfo}

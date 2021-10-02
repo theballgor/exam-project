@@ -11,6 +11,8 @@
 .icon {
   height: 30px;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .logo {

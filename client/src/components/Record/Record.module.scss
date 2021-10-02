@@ -1,0 +1,52 @@
+@import "./src/resources/styles/vars";
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+.iconContainer {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.inputContainer {
+  width: 350px;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.buttonRow[data-contenttype='edit'] {
+  background-color: $main-color;
+}
+
+.buttonRow[data-contenttype='delete'] {
+  background-color: $main-red;
+}
+
+.input {
+  width: 100%;
+  input {
+    padding: 12px;
+  }
+}
+
+.iconContainer[data-isdisabled=true] {
+  .icon {
+    cursor: default;
+  }
+  background-color: gray;
+}

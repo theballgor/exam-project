@@ -57,7 +57,7 @@ const Navbar = () => {
                                                     />
                                                 </NavLink>
                                             }
-                                            <NavLink to={Routes.List}>
+                                            <NavLink to={Routes.Records}>
                                                 <img
                                                     className={styles.icon}
                                                     src={ListIcon}

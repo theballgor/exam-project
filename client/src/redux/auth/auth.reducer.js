@@ -1,4 +1,9 @@
-import {AUTH_CLEAR_AUTH, AUTH_SET_AUTH, AUTH_SET_IS_LOADING, AUTH_SET_IS_READY} from "../action.types";
+import {
+    AUTH_CLEAR_AUTH,
+    AUTH_SET_AUTH,
+    AUTH_SET_IS_LOADING,
+    AUTH_SET_IS_READY,
+} from "../action.types";
 
 const initialState = {
     userId: '',
