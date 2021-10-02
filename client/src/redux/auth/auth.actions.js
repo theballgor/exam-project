@@ -2,7 +2,7 @@ import {
     AUTH_CLEAR_AUTH,
     AUTH_SET_AUTH,
     AUTH_SET_IS_LOADING,
-    AUTH_SET_IS_READY, AUTH_SET_IS_STARTUP_LOADING,
+    AUTH_SET_IS_READY,
     PROFILE_ON_FROM_CHANGED
 } from "../action.types";
 import {LS_EMAIL, LS_TOKEN, LS_USERID, LS_USERNAME} from "../../services/types/localStorage";

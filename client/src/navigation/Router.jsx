@@ -9,7 +9,6 @@ import {useSelector} from "react-redux";
 import {ADMIN} from "../services/types/roles";
 import AdminPanelPage from "../pages/AdminPanelPage/AdminPanelPage";
 import RecordsPage from "../pages/RecordsPage/RecordsPage";
-import Loader from "../components/Loader/Loader";
 import ServerUnavailablePage from "../pages/ServerUnavailablePage/ServerUnavailablePage";
 
 const useRoutes = () => {

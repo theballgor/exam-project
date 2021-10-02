@@ -57,7 +57,7 @@ export const onProfileSaveAction = () => {
 
             dispatch(setProfileIsLoadingAction(true))
             const {token} = getState().auth
-            const {data, status} = await httpRequest(
+            const {status} = await httpRequest(
                 API_PROFILE + '/update',
                 'PUT',
                 {firstName, lastName, additionalInfo},

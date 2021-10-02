@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import styles from './ProfilePage.module.scss'
-import {Button, Snackbar, TextField} from "@material-ui/core";
+import {Button, TextField} from "@material-ui/core";
 import {useDispatch, useSelector} from "react-redux";
 import {loadProfileDataActions, onProfileChangedAction, onProfileSaveAction} from "../../redux/profile/profile.actions";
 import Loader from "../../components/Loader/Loader";
