@@ -1,6 +1,8 @@
 export default class Routes {
     static Default = '/'
     static Profile = '/profile'
-    static Admin = '/admin'
     static Records = '/records'
+    static Admin = '/admin'
+    static AdminUsers = '/admin/users'
+    static AdminRecords = '/admin/records'
 }

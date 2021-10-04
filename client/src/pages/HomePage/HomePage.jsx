@@ -5,7 +5,7 @@ const HomePage = () => {
     return (
         <div className={styles.root}>
             <div className={'pageTitle'}>
-                Welcome to Library.IO
+                Welcome to Records.IO
             </div>
             <div className={styles.content}>
                 <p className={styles.paragraph}>

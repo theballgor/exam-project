@@ -41,7 +41,7 @@ const Navbar = () => {
                     <Container maxWidth={'lg'}>
                         <Toolbar className={styles.toolbar}>
                             <Button className={styles.logo} variant={'text'} onClick={navigateToHome}>
-                                Library.io
+                                Records.io
                             </Button>
                             <div className={styles.navigation}>
                                 {
