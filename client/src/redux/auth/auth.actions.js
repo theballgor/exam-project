@@ -77,7 +77,11 @@ export const createAccountAction = ({email, password, username}) => {
         }
         dispatch(setAuthIsLoading(true))
         try {
-            const {status} = await httpRequest(API_AUTH + '/register', 'POST', {email, password, username})
+
+            const url = API_AUTH + '/register'
+            console.log(url)
+
+            const {status} = await httpRequest(url, 'POST', {email, password, username})
             if(status === 201) {
                 dispatch(setAuthStepAction(STEP_LOGIN))
                 dispatch(addToastMessage({

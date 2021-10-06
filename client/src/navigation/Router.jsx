@@ -10,8 +10,6 @@ import {ADMIN} from "../services/types/roles";
 import AdminPanelPage from "../pages/AdminPanelPage/AdminPanelPage";
 import RecordsPage from "../pages/RecordsPage/RecordsPage";
 import ServerUnavailablePage from "../pages/ServerUnavailablePage/ServerUnavailablePage";
-import AdminUsersPage from "../pages/AdminUsersPage/AdminUsersPage";
-import AdminRecordsPage from "../pages/AdminRecordsPage/AdminRecordsPage";
 
 const useRoutes = () => {
 
@@ -43,8 +41,6 @@ const useRoutes = () => {
                             role === ADMIN &&
                                 <>
                                     <Route path={Routes.Admin} exact component={AdminPanelPage}/>
-                                    <Route path={Routes.AdminUsers} exact component={AdminUsersPage}/>
-                                    <Route path={Routes.AdminRecords} exact component={AdminRecordsPage}/>
                                 </>
                         }
                         <Redirect to={Routes.Default}/>

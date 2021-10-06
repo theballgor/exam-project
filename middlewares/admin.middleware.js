@@ -1,5 +1,5 @@
 import User from '../models/User.js'
-import {Roles} from "../types/user.types";
+import {Roles} from "../types/user.types.js";
 
 export default async (req, res, next) => {
     try {

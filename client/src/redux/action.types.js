@@ -25,3 +25,7 @@ export const RECORDS_ADD_RECORD = 'records/add-record'
 export const RECORDS_DELETE_RECORD = 'records/delete-record'
 export const RECORDS_EDIT_RECORD = 'records/edit-record'
 export const RECORDS_SET_IS_LOADED = 'records/set-is-loaded'
+
+
+export const ADMIN_GET_USERS_LOADING = 'admin/get-users-loading'
+export const ADMIN_GET_USERS = 'admin/get-users'

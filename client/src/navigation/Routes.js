@@ -3,6 +3,4 @@ export default class Routes {
     static Profile = '/profile'
     static Records = '/records'
     static Admin = '/admin'
-    static AdminUsers = '/admin/users'
-    static AdminRecords = '/admin/records'
 }

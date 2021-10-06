@@ -1,0 +1,8 @@
+.icon {
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.icon[data-disabled=true] {
+  background-color: #efefef;
+}
