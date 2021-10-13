@@ -171,7 +171,6 @@ export const editRecordsRecordAction = record => {
         } finally {
             dispatch({type: RECORDS_SET_MANAGE_RECORD_LOADING, payload: false})
         }
-        // dispatch({type: RECORDS_EDIT_RECORD, payload: record})
     }
 }
 

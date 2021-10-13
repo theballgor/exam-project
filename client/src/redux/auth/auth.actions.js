@@ -1,9 +1,11 @@
 import {
-    AUTH_CLEAR_AUTH,
+    ADMIN_CLEAR,
+    APPLICATION_CLEAR,
+    AUTH_CLEAR,
     AUTH_SET_AUTH,
     AUTH_SET_IS_LOADING,
-    AUTH_SET_IS_READY,
-    PROFILE_ON_FROM_CHANGED
+    AUTH_SET_IS_READY, PROFILE_CLEAR,
+    PROFILE_ON_FROM_CHANGED, RECORDS_CLEAR
 } from "../action.types";
 import {LS_EMAIL, LS_TOKEN, LS_USERID, LS_USERNAME} from "../../services/types/localStorage";
 import {httpRequest} from "../../services/utils/api/http.util";
@@ -114,12 +116,13 @@ export const loginAction = ({email, password}) => {
     }
 }
 
-export const clearAuthAction = () => {
+export const logoutAction = () => {
     return dispatch => {
         localStorage.clear()
-        dispatch({type: AUTH_CLEAR_AUTH, payload: null})
-        dispatch({type: PROFILE_ON_FROM_CHANGED, payload: {name: 'firstName', value: ''}})
-        dispatch({type: PROFILE_ON_FROM_CHANGED, payload: {name: 'lastName', value: ''}})
-        dispatch({type: PROFILE_ON_FROM_CHANGED, payload: {name: 'additionalInfo', value: ''}})
+        dispatch({type: ADMIN_CLEAR})
+        dispatch({type: APPLICATION_CLEAR})
+        dispatch({type: AUTH_CLEAR})
+        dispatch({type: PROFILE_CLEAR})
+        dispatch({type: RECORDS_CLEAR})
     }
 }

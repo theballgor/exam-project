@@ -1,0 +1,22 @@
+@import "src/resources/styles/vars";
+
+.root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $main-color;
+  color: white;
+}
+
+.title {
+  font-size: 150px;
+}
+
+.text {
+  font-size: 50px;
+  font-weight: 700;
+}

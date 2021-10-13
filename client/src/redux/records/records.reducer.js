@@ -5,7 +5,7 @@ import {
     RECORDS_SET_MANAGE_RECORD_LOADING,
     RECORDS_SET_GET_RECORDS_LOADING,
     RECORDS_EDIT_RECORD,
-    RECORDS_DELETE_RECORD, RECORDS_SET_IS_LOADED
+    RECORDS_DELETE_RECORD, RECORDS_SET_IS_LOADED, RECORDS_CLEAR
 } from "../action.types";
 
 const initialState = {
@@ -41,6 +41,8 @@ export const recordsReducer = (state = initialState, action) => {
             return {...state, records: editCopy}
         case RECORDS_SET_IS_LOADED:
             return {...state, isLoaded: action.payload}
+        case RECORDS_CLEAR:
+            return initialState
         default:
             return state
     }

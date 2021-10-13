@@ -22,7 +22,7 @@ const useRoutes = () => {
             <BrowserRouter>
                 <Switch>
                     <Route path={Routes.Default} exact component={ServerUnavailablePage}/>
-                    <Redirect to={Routes.Default}/>
+                    <Redirect to={Routes.Default} />
                 </Switch>
             </BrowserRouter>
         )

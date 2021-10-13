@@ -52,7 +52,6 @@ router.post('/', [
     }
 })
 
-
 router.put('/', [
     authMiddleware,
     check('content', 'Record must be from 4 to 256 symbols').isLength({min: 4, max: 256})

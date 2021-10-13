@@ -6,3 +6,12 @@
 .icon[data-disabled=true] {
   background-color: #efefef;
 }
+
+.loaderContainer {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}

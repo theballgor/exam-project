@@ -1,13 +1,14 @@
 export const AUTH_SET_AUTH = 'auth/set-auth'
 export const AUTH_SET_IS_READY = 'auth/set-is-ready'
 export const AUTH_SET_IS_LOADING = 'auth/set-is-loading'
-export const AUTH_CLEAR_AUTH = 'auth/clear-auth'
+export const AUTH_CLEAR = 'auth/clear'
 
 
 export const APPLICATION_SET_IS_AUTH_MODAL_VISIBLE = 'application/set-is-auth-modal-visible'
 export const APPLICATION_SET_AUTH_STEP = 'application/set-auth-step'
 export const APPLICATION_ADD_TOAST_MESSAGE = 'application/add-toast-message'
 export const APPLICATION_SET_IS_SERVER_AVAILABLE = 'application/set-is-server-available'
+export const APPLICATION_CLEAR = 'application/clear'
 
 
 export const PROFILE_LOAD_DATA = 'profile/load-data'
@@ -15,6 +16,7 @@ export const PROFILE_ON_FROM_CHANGED = 'profile/on-form-changed'
 export const PROFILE_ON_FROM_VALIDATION = 'profile/on-form-validation'
 export const PROFILE_SET_IS_LOADING = 'profile/set-is-loading'
 export const PROFILE_SET_WAS_CHANGED = 'profile/set-was-changed'
+export const PROFILE_CLEAR = 'profile/clear'
 
 
 export const RECORDS_SET_MANAGE_RECORD_LOADING = 'records/set-manage-record-loading'
@@ -25,7 +27,11 @@ export const RECORDS_ADD_RECORD = 'records/add-record'
 export const RECORDS_DELETE_RECORD = 'records/delete-record'
 export const RECORDS_EDIT_RECORD = 'records/edit-record'
 export const RECORDS_SET_IS_LOADED = 'records/set-is-loaded'
+export const RECORDS_CLEAR = 'records/clear'
 
 
 export const ADMIN_GET_USERS_LOADING = 'admin/get-users-loading'
 export const ADMIN_GET_USERS = 'admin/get-users'
+export const ADMIN_SET_TOTAL_COUNT = 'admin/set-total-count'
+export const ADMIN_DELETE_USER = 'admin/delete-user'
+export const ADMIN_CLEAR = 'admin/clear'

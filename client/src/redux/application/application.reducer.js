@@ -1,5 +1,5 @@
 import {
-    APPLICATION_ADD_TOAST_MESSAGE,
+    APPLICATION_ADD_TOAST_MESSAGE, APPLICATION_CLEAR,
     APPLICATION_SET_AUTH_STEP,
     APPLICATION_SET_IS_AUTH_MODAL_VISIBLE,
     APPLICATION_SET_IS_SERVER_AVAILABLE,
@@ -26,6 +26,8 @@ export const applicationReducer = (state = initialState, action) => {
             return {...state, toastMessages: [...state.toastMessages, action.payload]}
         case APPLICATION_SET_IS_SERVER_AVAILABLE:
             return {...state, isServerAvailable: action.payload}
+        case APPLICATION_CLEAR:
+            return {...initialState, isServerAvailable: true}
         default:
             return state
     }

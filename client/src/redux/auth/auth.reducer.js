@@ -1,5 +1,5 @@
 import {
-    AUTH_CLEAR_AUTH,
+    AUTH_CLEAR,
     AUTH_SET_AUTH,
     AUTH_SET_IS_LOADING,
     AUTH_SET_IS_READY,
@@ -24,8 +24,8 @@ export const authReducer = (state = initialState, action) => {
             return {...state, isLoading: action.payload}
         case AUTH_SET_IS_READY:
             return {...state, isReady: action.payload}
-        case AUTH_CLEAR_AUTH:
-            return {...state, userId: '', role: '', username: '', token: '', email: ''}
+        case AUTH_CLEAR:
+            return {initialState, isReady: true}
         default:
             return state
     }

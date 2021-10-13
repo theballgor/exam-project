@@ -20,8 +20,11 @@ router.post('/register', [
         }
         const {email, password, username} = req.body
         const dbUserByUsername = await User.findOne({username})
+        if (dbUserByUsername) {
+            return res.status(400).json({message: 'Same user already exists'})
+        }
         const dbUserByEmail = await User.findOne({email})
-        if (dbUserByEmail || dbUserByUsername) {
+        if (dbUserByEmail) {
             return res.status(400).json({message: 'Same user already exists'})
         }
         const hashPassword = await bcrypt.hash(password, 12)

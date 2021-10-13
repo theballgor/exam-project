@@ -7,7 +7,7 @@ import AuthModal from "../../modals/AuthModal/AuthModal";
 import {useDispatch, useSelector} from "react-redux";
 import {setIsAuthModalVisibleAction} from "../../redux/application/application.actions";
 import {ADMIN} from "../../services/types/roles";
-import {clearAuthAction} from "../../redux/auth/auth.actions";
+import {logoutAction} from "../../redux/auth/auth.actions";
 import ProfileIcon from '../../resources/icons/account-white.svg'
 import AdminPanelIcon from '../../resources/icons/admin-panel-white.svg'
 import LogoutIcon from '../../resources/icons/logout-white.svg'
@@ -26,7 +26,7 @@ const Navbar = () => {
     }
 
     const onLogoutIconClick = () => {
-        dispatch(clearAuthAction())
+        dispatch(logoutAction())
     }
 
     const navigateToHome = () => {
